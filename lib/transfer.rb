@@ -9,7 +9,15 @@ class Transfer
   end 
   
   def valid?
-    
+    bank_account.valid?(self.sender)
+    bank_account.valid?(self.reciever)
+  end 
+  
+  def execute_transaction
+  end 
+  
+  def reverse_transfer
+  end 
   
   
 end
