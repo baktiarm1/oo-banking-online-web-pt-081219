@@ -10,7 +10,7 @@ class Transfer
   
   def valid?
     BankAccount.valid?(self.sender)
-    bank_account.valid?(self.reciever)
+    bank_account.valid?(self.receiver)
   end 
   
   def execute_transaction
