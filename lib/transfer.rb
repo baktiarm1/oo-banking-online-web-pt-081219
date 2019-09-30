@@ -9,8 +9,8 @@ class Transfer
   end 
   
   def valid?
-    BankAccount.@sender.valid?
-    BankAccount.@receiver.valid?
+    sender.valid?
+    receiver.valid?
   end 
   
   def execute_transaction
