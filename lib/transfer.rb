@@ -18,6 +18,7 @@ class Transfer
     if self.status == 'pending'
      if sender.balance < amount
        self.status = "rejected"
+       return
        
       end 
       receiver.balance +=amount
