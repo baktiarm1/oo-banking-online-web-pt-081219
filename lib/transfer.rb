@@ -14,9 +14,12 @@ class Transfer
   end 
   
   def execute_transaction
+    if self.status == 'pending'
     receiver.balance +=amount
     sender.balance -=amount
     self.status = 'complete'
+  end 
+  
   end 
   
   def reverse_transfer
